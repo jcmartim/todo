@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!--Header -->
     <header class="header">Lista de Tarefas</header>
 
+    <!-- main -->
     <div class="main">
 
-      <section class="content">
+        <!--Itens das tarefas -->
         <ol class="list">
           <li>
             <div class="item">
@@ -40,7 +42,14 @@
             </div>
           </li>
         </ol>
+
+        <!-- Footer -->
+        <footer class="footer">
+
+          <!--back -->
         <div class="back" style="display: none"></div>
+
+        <!--popup -->
         <div class="popup" style="bottom: -300px">
           <div class="content">
             <div class="alert">
@@ -63,20 +72,22 @@
             <button class="btn" style="margin-right: 10px">Cancelar</button>
             <button class="btn">Excluir</button>
           </div>
-        </div>
-      </section>
-      
-      <div class="btn-add">
-        <button class="add">
-          <div class="icon-add">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-            </svg>
-          </div>
-        </button>
-      </div>
+        </div> <!--end popup -->
 
-    </div>
+        <!--Botão Add -->
+        <div class="btn-add">
+          <button class="add">
+            <div class="icon-add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+              </svg>
+            </div>
+          </button>
+        </div> <!--end botão add -->
+
+        </footer> <!-- end footer-->
+
+    </div> <!--end main -->
 
     <script src="scripts.js"></script>
   </body>
