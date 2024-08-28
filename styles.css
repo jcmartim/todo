@@ -87,7 +87,7 @@ body {
 
 section.content {
   position: relative;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 120px);
   overflow: hidden;
 }
 
@@ -155,4 +155,42 @@ section.content {
 
 .alert svg {
   margin-right: 10px;
+}
+
+.icon-add {
+  border: solid 3px #0090bf;
+  color: #0090bf;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-add svg {
+  width: 30px;
+  height: 30px;
+}
+
+.add {
+  border: none;
+  background-color: #ffff;
+  transition: 0.5s all;
+  border-radius: 50%;
+}
+
+.add:hover {
+  background-color: #0090bf;
+  border-radius: 50%;
+  .icon-add svg {
+    color: #fff;
+  }
+}
+
+.btn-add {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
