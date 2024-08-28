@@ -1,0 +1,158 @@
+*,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  box-shadow: 0px 0px 8px #0000002e;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 1px #cacaca;
+  margin-right: 20px;
+}
+
+.list {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.trash {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+}
+
+.trash:hover {
+  background: #0090bf;
+  color: #fff;
+}
+
+.check {
+  border: solid 2px #cacaca;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.list li {
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: solid 1px #cecece;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #0008;
+}
+
+section.content {
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.popup {
+  background-color: #fff;
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  padding: 30px;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 -5px 5px #dfdfdf70;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s all;
+}
+
+.popup-alert .content {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup .footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: solid 2px #0090bf;
+  color: #0090bf;
+  background-color: #fff;
+  font-size: 18px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #0090bf;
+}
+
+.popup-alert .footer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.alert {
+  border: solid 1px #8c0000;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #580000;
+  background-color: #f6b7b7;
+  display: flex;
+}
+
+.alert svg {
+  margin-right: 10px;
+}
