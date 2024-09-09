@@ -29,9 +29,9 @@ function resolveData(){
                     { task: "Tomar café", date: "08-09-2024", marked: true },
                     { task: "Tomar banho", date: "08-09-2024", marked: false },
                     { task: "Fazer um lanche", date: "08-09-2024", marked: true },
-                ]
+                ] 
             );
-        },800)
+        },1000)
     })
 }
 
@@ -60,26 +60,32 @@ async function getData() {
             list.innerHTML += template(item);
         })
 
-        /**
-         * Função para abrir popup exluir tarefa
-         * A variável trash é um array porque usamos o querySelectorAll
-         * para pegar todos os botões de lixeira gerados dinamicamente.
-         */
         const trash = document.querySelectorAll(".trash");
-        //Então faz um loop no trash para percorrer todos.
-        trash.forEach(btnTrach => {
-            // Em fim, monitora o evento em cada botão de lixeira.
-            btnTrach.addEventListener("click", function () {
-                popupDel.style.bottom = "0px";
-                back.style.display = "block";
-            });
-        });
+        openPopuptrash(trash);
+
     }
 }
 
 getData();
 
-// Função para adiconar novas tarefas.
+function openPopuptrash(trash){
+    /**
+     * Função para abrir popup exluir tarefa
+     * A variável trash é um array porque usamos o querySelectorAll
+     * para pegar todos os botões de lixeira gerados dinamicamente.
+     */
+    trash.forEach(btnTrach => {
+        // Em fim, monitora o evento em cada botão de lixeira.
+        btnTrach.addEventListener("click", function () {
+            popupDel.style.bottom = "0px";
+            back.style.display = "block";
+        });
+    });
+
+    console.log('openPopuptrash');
+}
+
+// Função para adicionar novas tarefas.
 function addTaskInData(){
     const task = document.querySelector('#task');
     const date = document.querySelector('#date');
@@ -101,8 +107,11 @@ function closePopupForm() {
 
 // Monitora o evento de click do botão adicionar tarefa.
 addTask.addEventListener("click", function(){
+    const trash = document.querySelectorAll(".trash");
+    openPopuptrash(trash);
     data = [];
     closePopupForm();
+    addTaskInData()
     data.forEach((item) => {
         list.innerHTML += template(item);
     });
