@@ -12,83 +12,80 @@
 
     <!-- main -->
     <div class="main">
+      <!--Itens das tarefas -->
+      <ol id="list" class="list"></ol>
 
-        <!--Itens das tarefas -->
-        <ol class="list">
-          <li>
-            <div class="item">
-              <div class="check"></div>
-              <div class="list-content">
-                Tomar café
-                <div class="date">27-08-2024</div>
-              </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <!--back -->
+        <div class="back" style="display: none"></div>
+
+        <!--Popup form-->
+        <div id="popupForm" class="popup" style="bottom: -300px">
+          <div class="content">
+            <div>
+              <input type="text" id="task" />
+              <input type="date" id="date" />
             </div>
-            <div class="trash">
+            <div style="text-align: right">
+              <button id="addTask" class="btn">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <!--popup del -->
+        <div id="popupDel" class="popup" style="bottom: -300px">
+          <div class="content">
+            <div class="alert">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
                 fill="currentColor"
-                class="bi bi-trash"
+                class="bi bi-exclamation-octagon-fill"
                 viewBox="0 0 16 16"
               >
                 <path
-                  d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                  d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
                 />
+              </svg>
+              <div>Você realmente deseja exluir esta tarefa?</div>
+            </div>
+          </div>
+          <div class="footer">
+            <button id="cancel" class="btn" style="margin-right: 10px">
+              Cancelar
+            </button>
+            <button id="deletar" class="btn">Excluir</button>
+          </div>
+        </div>
+        <!--end popup -->
+
+        <!--Botão Add -->
+        <div id="add" class="btn-add">
+          <button class="add">
+            <div class="icon-add">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+              >
                 <path
-                  d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
                 />
               </svg>
             </div>
-          </li>
-        </ol>
+          </button>
+        </div>
+        <!--end botão add -->
+      </footer>
+      <!-- end footer-->
+    </div>
+    <!--end main -->
 
-        <!-- Footer -->
-        <footer class="footer">
-
-            <!--back -->
-          <div class="back" style="display: none"></div>
-
-          <!--popup -->
-          <div class="popup" style="bottom: -300px">
-            <div class="content">
-              <div class="alert">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-exclamation-octagon-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
-                  />
-                </svg>
-                <div>Você realmente deseja exluir esta tarefa?</div>
-              </div>
-            </div>
-            <div class="footer">
-              <button class="btn" style="margin-right: 10px">Cancelar</button>
-              <button class="btn">Excluir</button>
-            </div>
-          </div> <!--end popup -->
-
-          <!--Botão Add -->
-          <div class="btn-add">
-            <button class="add">
-              <div class="icon-add">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                </svg>
-              </div>
-            </button>
-          </div> <!--end botão add -->
-
-        </footer> <!-- end footer-->
-
-    </div> <!--end main -->
-
-    <script src="scripts.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
